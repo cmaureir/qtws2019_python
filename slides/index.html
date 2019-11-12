@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Unleash the power of C++ in Python</title>
+  <title>Write your first data based app with Qt for Python</title>
 
   <meta name="description" content="A guide through the bindings generation process">
   <meta name="author" content="Cristian Maureira-Fredes">
@@ -53,27 +53,140 @@
   </section>
   <!--***************************************************************************-->
   <section>
-    Handling data fun
+    <h2>Data Science</h2>
   </section>
 
   <section>
-    Handling data messy
+    <h2>Data Science <i class="yellow-light">in reality</i></h2>
   </section>
 
   <section>
-    NumPy
+    <div id="left70">
+    <h3>NumPy</h3>
+    <p><a href="https://numpy.org">numpy.org</a></p>
+    <ul>
+        <li>a powerful <i>N-</i>dim array object,</li>
+        <li>linear algebra, Fourier transform, random number capabilities,</li>
+        <li>tools for integrating C, C++, and Fortran code.</li>
+    </ul>
+    </div>
+    <div id="right30">
+        <img style="background: 0;border: 0;width: 90%;" src="img/numpy.png" />
+    </div>
   </section>
 
   <section>
-    Pandas
+    <div id="left70">
+    <h3>Pandas</h3>
+    <p><a href="https://pandas.pydata.org">pandas.pydata.org</a></p>
+    <ul>
+        <li>high-performance operations,</li>
+        <li>provide analysis tools,</li>
+        <li><i class="green">labeled</i> data structures</li>
+    </ul>
+    </div>
+    <div id="right30">
+        <img style="background: white; border:0;" src="img/pandas.png" />
+    </div>
   </section>
 
   <section>
-    Plotting libraries
+    <h2>Data representation</h2>
   </section>
 
   <section>
-    Plotting libraries
+    <h3>Matplotlib</h3>
+    <img src="img/matplotlib.svg" />
+    <br/>
+    <a href="https://matplotlib.org">matplotlib.org</a>
+  </section>
+
+  <section>
+    <h3>Plotly</h3>
+    <img src="img/plotly.png" />
+    <br/>
+    <a href="https://plot.ly">plot.ly</a>
+  </section>
+
+  <section>
+    <h3>Bokeh</h3>
+    <img src="img/bokeh.png" />
+    <br/>
+    <a href="https://bokeh.org">bokeh.org</a>
+  </section>
+
+  <section>
+    <ul>
+        <li>Dash,</li>
+        <li>Seaborn,</li>
+        <li>ggplot,</li>
+        <li>pygal,</li>
+        <li>Gleam,</li>
+        <li>missingno,</li>
+        <li>Leather,</li>
+        <li>...</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Data Workflow</h3>
+  </section>
+
+  <section>
+    <h3>Jupyter notebooks</h3>
+  </section>
+
+  <section>
+    <h3>What can <i class="green">Qt</i> offer?</h3>
+  </section>
+
+  <section>
+    <img class="plain" style="background: 0;" src="img/qtforpython.png" />
+  </section>
+
+  <section>
+    <h3>Install</h3>
+    <pre class="fragment" data-fragment-index="2" style="font-size: 40px; width: 50%;"><code class="python" data-trim data-noescape>
+    pip install PySide2
+    </code></pre>
+    <p class="fragment" data-fragment-index="2" style="font-size: 100%;">
+        ٩( ᐛ )و
+    </p>
+  </section>
+
+  <section>
+    <h2>Hello World</h2>
+    <pre><code class="python" data-trim data-noescape>
+import sys
+from PySide2.QtWidgets import QApplication, QLabel
+
+# Qt Application
+app = QApplication([])
+
+# Qt Widget
+label = QLabel("Hello World!")
+label.show()
+
+# Executing app
+sys.exit(app.exec_())
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Let's look at the code</h3>
+  </section>
+
+  <section>
+    <h3>Booth examples</h3>
+    <ul>
+        <li>Matplotlib integration,</li>
+        <li>OpenCV interaction,</li>
+        <li>SciKit Image representation.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>What about you?</h3>
   </section>
 
   <section>

@@ -1,53 +1,56 @@
 # Qt World Summit 2019 Berlin
-## How to bring your C++ projec to Python land
+## Write Your First Data-based Application with Qt for Python in 0.01 days
 
-There has been always efforts to provide Python bindings for many popular C++
-libraries and frameworks.
+Handling data is a fun task, but it can easily become a messy one.
 
-This binding process is a complex task, and there has been many tools that tried to
-achieve t in different ways.
+Thankfully Python helps us to solve most of our problems,
+due to the large amount of modules that improve our workflow,
+but having a set of scripts, that can help you on different processes,
+is not the best way to distribute or allow other users to use them.
 
-Due to the complexity of some libraries, one needs to wisely choose the elements
-that will form this entire process.
+Getting value from your code base usually translates into adapting it into
+a more easy-to-understand process including: allowing to select input files,
+change parameters, save plots, etc.
 
-In the case of Qt, after a proper study, it became apparent that a custom solution
-was required, and this led to the creation of Shiboken, which is the bindings
-generator tool behind the Qt for Python project.
+This new layer of difficulty is more extreme if the end-user of your script
+is someone without Python or programming knowledge.
 
-In this talk, you will learn how to get started with many binding generation tools,
-but most importantly we will go step-by-step on how to start your own binding
-project using Shiboken.
+In this talk, you will learn how to create data-oriented graphical user
+interfaces, to make algorithms easier to use.
 
-### Examples
+### Example
 
-The examples contain a simple implementation of a `Hello World`
-written in C and C++, then a basic implementation using different tools
-is used to expose the function to Python.
+The code used for the example is inspired on the content of the second
+[Qt for Python Webinar](https://www.youtube.com/watch?v=wKqLaNqxgas),
+from which you can find a
+[step-by-step tutorial](https://doc.qt.io/qtforpython/tutorials/datavisualize/index.html)
+on the official docs.
 
-* `cpython`, using a simple raw CPython implementation for the function.
-* `ctypes`, to load the shared library (not used in the talk).
-* [Boost::python](https://www.boost.org/doc/libs/1_61_0/libs/python/doc/html/index.html)
-* [SWIG](http://www.swig.org/)
-* [shiboken](https://doc.qt.io/qtforpython/shiboken2/)
-* [pyBind11](https://pybind11.readthedocs.io)
-* [cffi](https://cffi.readthedocs.io">cffi.readthedocs.io)
-* [cppyy](https://cppyy.readthedocs.io)
-* [sip](https://riverbankcomputing.com/software/sip)
+The motivation was that there is currently a lot of boilerplate code
+that needs to be written to achieve writing a simple application from scratch,
+so we showed one of the alternatives for improving such situation.
 
-A more useful example related to `glob` is included too in the directory
-*fastglob*. This example uses the `<filesystem>` C++ library to achieve
-a similar result as `glob` and `Pathlib.glob`.
+Inside the [src](src/) directory you will find the following contents.
 
-* `fastglob`, directory with the implementation of the module.
-* `data`, 1000 directories with 1000 empty files each.
-* `glob_list.py`, listing using `glob`.
-* `pathlib_list.py`, listing using `Pathlib`.
-* `fastglob_list.py`, listing using `fastglob`.
-* `benchmark_1.sh`, benchmark using `/usr/bin/time`.
-* `benchmark_2.py`, benchmark using `time`.
+First example:
+* [Qt for Python: Hello World](src/hello.py)
+
+Modules:
+* [QtMatplotlib](src/QtMatplotlib/), module that provide a couple of abstractions
+  for a Matplotlib Canvas and a Figure, so it can be easily used by a Qt application.
+* [QtPandas](src/QtPandas/), proof-of-concept module that expose a QDataFrame class
+  which automatically handle a Pandas DataFrame into a QTableView + Model.
+
+Live example:
+* [Earthquake data](src/month.csv)
+* [Qt Data application (01)](src/01-qt_data.py), empty QMainWindow.
+* [Qt Data application (02)](src/02-qt_data.py), DataFrame values displayed
+  inside the QDataFrame module.
+* [Qt Data application (03)](src/03-qt_data.py), table and plot of the DataFrame data.
+* [Qt Data application (04)](src/04-qt_data.py), final example that provides also
+  a way to change the y-axis column that is currently plotted.
 
 ### Slides
 
 You can check the [slides here!](https://maureira.xyz/talks/qt/qtws2019_cpp)
 to write them I used [reveal.js](https://github.com/hakimel/reveal.js/).
-
