@@ -52,5 +52,5 @@ Live example:
 
 ### Slides
 
-You can check the [slides here!](https://maureira.xyz/talks/qt/qtws2019_cpp)
+You can check the [slides here!](https://maureira.xyz/talks/qt/qtws2019_python)
 to write them I used [reveal.js](https://github.com/hakimel/reveal.js/).
